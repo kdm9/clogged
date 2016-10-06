@@ -1,8 +1,9 @@
 {
   "name": "clogged",
   "main": "clogged",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Configurable, colorful logging lib.",
+  "repo": "kdmurray91/clogged",
   "repository": {
     "type": "git",
     "url": "https://github.com/kdmurray91/clogged.git"
