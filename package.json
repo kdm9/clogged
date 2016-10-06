@@ -5,9 +5,10 @@
   "description": "Configurable, colorful logging lib.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kdmurray91/clogged.git"
+    "url": "https://github.com/kdmurray91/clogged.git"
   },
   "src": [
+    "clogged.c",
     "clogged.h"
   ],
   "homepage": "https://github.com/kdmurray91/clogged",
