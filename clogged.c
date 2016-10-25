@@ -53,11 +53,11 @@ void _clg_entry_destroy(clg_entry_t *log_entry);
     }                               \
     } while (0)
 
-inline char *
+static inline char *
 clg_strdup(const char *src)
 {
     size_t len = strlen(src);
-    char *dst = malloc(len);
+    char *dst = malloc(len + 1);
     memcpy(dst, src, len);
     dst[len] = '\0';
     return dst;
@@ -99,6 +99,13 @@ int clg_logger_default(clg_logger_t *logger, clg_loglevel_t level)
     ret = clg_logger_add_destination_formatted(logger, stderr, level, fmtr);
 
     return ret;
+}
+
+int clg_logger_set_level(clg_logger_t *logger, clg_loglevel_t level)
+{
+    if (logger == NULL) return 1;
+    logger->level = level;
+    return 0;
 }
 
 int
@@ -150,6 +157,7 @@ clg_log_entry_init(clg_entry_t        *entry,
 
     entry->level = level;
     entry->message = clg_strdup(message);
+    entry->formatted = NULL;
     return 0;
 }
 
