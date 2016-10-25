@@ -1,7 +1,7 @@
 {
   "name": "clogged",
   "main": "clogged",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Configurable, colorful logging lib.",
   "repo": "kdmurray91/clogged",
   "repository": {
